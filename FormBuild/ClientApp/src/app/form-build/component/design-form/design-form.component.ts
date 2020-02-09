@@ -25,7 +25,7 @@ export class DesignFormComponent implements OnInit {
     private formService:FormBuildService,
     private formBuilder:FormlyFormBuilder
   ) {
-    this.formBuilder.buildForm(this.form, this.fields, this.model, this.options);
+    this.initForm();
   }
 
   ngOnInit() {
@@ -35,7 +35,8 @@ export class DesignFormComponent implements OnInit {
         this.drop(res);
       }
     );
-
+  }
+  initForm(){
     this.fields = [
       {
         type: 'input',
@@ -52,7 +53,6 @@ export class DesignFormComponent implements OnInit {
         }
       }
     ];
-
     this.groupOptions = [
       {
         type: 'input',
@@ -90,6 +90,7 @@ export class DesignFormComponent implements OnInit {
           }]
       }
     ]
+    this.formBuilder.buildForm(this.form, this.groupOptions, this.model, this.options);
   }
   drop(event: CdkDragDrop<FormlyFieldConfig[]>) {
     if (event.previousContainer === event.container) {
