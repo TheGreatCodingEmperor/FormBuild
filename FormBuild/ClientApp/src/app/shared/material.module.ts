@@ -30,6 +30,10 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
+import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {DragDropModule} from '@angular/cdk/drag-drop'
+
 @NgModule({
   declarations: [],
   imports: [
@@ -63,7 +67,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatStepperModule
+    MatStepperModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    DragDropModule
   ],
   exports: [
     MatAutocompleteModule,
@@ -96,7 +103,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatStepperModule
+    MatStepperModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    DragDropModule
   ]
 })
 export class MaterialModule { }

@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormBuildComponent } from './view/form-build.component';
+import { DesignFormComponent } from './component/design-form/design-form.component';
 
 const routes: Routes = [
-  { path:'formbuild', component: FormBuildComponent }
+  { path:'formbuild', component: DesignFormComponent }
 ];
 
 @NgModule({

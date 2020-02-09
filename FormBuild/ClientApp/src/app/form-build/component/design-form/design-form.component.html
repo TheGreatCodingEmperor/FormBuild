@@ -1,0 +1,19 @@
+<mat-drawer-container style="min-height: 70vh;" >
+    <mat-drawer #drawer mode="side">
+        <div cdkDropList  id="options"
+        [cdkDropListConnectedTo]="['fieldList']"
+        [cdkDropListData]="groupOptions"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)" >
+            <div *ngFor="let item of groupOptions"  cdkDrag>{{ item.type }}</div>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+
+        <app-my-formly-form #myFormly [form]="form" [fields]="fields" [model]="model" [options]="options"></app-my-formly-form>
+    </mat-drawer-content>
+
+</mat-drawer-container>
+<button  (click)="drawer.toggle()">design</button>
+ <!-- [cdkDropListConnectedTo]="[fields]" -->
+ <!-- [cdkDropListData]="groupOptions" -->

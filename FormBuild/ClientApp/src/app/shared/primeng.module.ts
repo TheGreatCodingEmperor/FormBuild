@@ -65,6 +65,7 @@ import { TooltipModule } from 'primeng/tooltip';
 import { TreeModule } from 'primeng/tree';
 import { TreeTableModule } from 'primeng/treetable';
 import { VirtualScrollerModule } from 'primeng/virtualscroller';
+import { SidebarModule } from 'primeng/primeng';
 
 @NgModule({
   declarations: [],
@@ -134,7 +135,8 @@ import { VirtualScrollerModule } from 'primeng/virtualscroller';
         TooltipModule,
         TreeModule,
         TreeTableModule,
-        VirtualScrollerModule
+        VirtualScrollerModule,
+        SidebarModule
   ],
   exports:[
     AccordionModule,
@@ -202,7 +204,8 @@ import { VirtualScrollerModule } from 'primeng/virtualscroller';
         TooltipModule,
         TreeModule,
         TreeTableModule,
-        VirtualScrollerModule
+        VirtualScrollerModule,
+        SidebarModule
   ]
 })
 export class PrimengModule { }

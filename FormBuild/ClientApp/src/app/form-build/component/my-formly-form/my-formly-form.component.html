@@ -1,8 +1,9 @@
-<div >
-    <formly-field *ngFor="let field of fields" hide-deprecation [form]="field.form"
-        [options]="field.options" [model]="field.model" [field]="field">
+<div  cdkDropList  id="fieldList"
+[cdkDropListConnectedTo]="['options']"
+[cdkDropListData]="fields"
+class="example-list"
+(cdkDropListDropped)="notifyDrop($event)">
+    <formly-field *ngFor="let field of fields" [form]="field.form" [options]="field.options"
+        [model]="field.model" [field]="field" [options]="field.options" cdkDrag>
     </formly-field>
-    <ng-container #content>
-        <ng-content></ng-content>
-    </ng-container>
 </div>
